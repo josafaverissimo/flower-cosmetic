@@ -1,0 +1,20 @@
+@import './reset.css';
+@import './fonts.css';
+@import './base.css';
+
+@import './components/header.css';
+@import './components/footer.css';
+@import './components/content.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--color-background-dark);
+  color: var(--color-text);
+  font-family: 'Tajawal', sans-serif;
+}

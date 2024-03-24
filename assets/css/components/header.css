@@ -1,0 +1,113 @@
+.header {
+  padding: var(--spacing-md) var(--spacing-sm) var(--spacing-sm) var(--spacing-sm);
+  background-color: var(--color-background);
+  border-bottom: var(--border-thin);
+
+  .logo__title {
+    display: block;
+    text-align: center;
+    font-size: var(--text-size-lg);
+    font-family: var(--font-family-title);
+
+    &.logo__title--mobile {
+      display: block;
+    }
+
+    &.logo__title--desktop {
+      display: none;
+    }
+  }
+
+  .header__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__main__nav {
+      align-self: center;
+      position: relative;
+
+      &:focus-within {
+        .nav__links {
+          display: block;
+        }
+      }
+
+      .nav__hamburgerMenu {
+        background-color: var(--color-text);
+        mask-image: url('../../icons/hamburger-menu.svg');
+        cursor: pointer;
+        border: none;
+        width: 32px;
+        height: 32px;
+      }
+
+      .nav__links {
+        display: none;
+        position: absolute;
+        z-index: 5;
+        border-radius: var(--border-radius-sm);
+        background-color: var(--color-background);
+        box-shadow: var(--shadow-sm);
+
+        .nav__links__link {
+          display: block;
+          text-decoration: none;
+          padding: var(--spacing-sm);
+
+          .link__text {
+            color: var(--color-text-dark);
+            border-bottom: var(--border-thin);
+          }
+        }
+      }
+    }
+
+    .header__main__logo {
+      .logo__image {
+        height: 5rem;
+        width: 5rem;
+        object-fit: contain;
+        border-radius: var(--border-radius-circle);
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    & {
+      .header__main {
+        .header__main__nav {
+          .nav__hamburgerMenu {
+            display: none;
+          }
+
+          .nav__links {
+            display: flex;
+            position: static;
+            z-index: 0;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & {
+      position: relative;
+
+      .logo__title {
+        &.logo__title--mobile {
+          display: none;
+        }
+
+        &.logo__title--desktop {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          display: block;
+        }
+      }
+    }
+  }
+}

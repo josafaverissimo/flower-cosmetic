@@ -1,0 +1,24 @@
+:root {
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-xl: 3rem;
+
+  --border-thin: thin solid var(--color-border-light);
+  --border-radius-circle: 50%;
+  --border-radius-sm: .5rem;
+
+  --text-size-sm: 1rem;
+  --text-size-md: 1.5rem;
+  --text-size-lg: 2rem;
+
+  --color-background: #fff;
+  --color-background-dark: #f0f0f0;
+  --color-shadow: #ccc;
+  --color-text: #444;
+  --color-text-dark: #000;
+  --color-border-light: #ccc;
+
+  --font-family-title: 'Borel', sans-serif;
+
+  --shadow-sm: 1px 1px 1rem var(--color-shadow);
+}
