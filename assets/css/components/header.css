@@ -77,6 +77,12 @@
     & {
       .header__main {
         .header__main__nav {
+          &:focus-within {
+            .nav__links {
+              display: flex;
+            }
+          }
+
           .nav__hamburgerMenu {
             display: none;
           }
